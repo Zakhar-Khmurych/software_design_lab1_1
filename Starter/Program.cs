@@ -1,9 +1,12 @@
-﻿namespace software_design_lab1_1
+﻿using System;
+
+namespace Starter
 {
     internal class Program
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine("hmm");
         }
     }
 }
