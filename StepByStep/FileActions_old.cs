@@ -11,17 +11,10 @@ namespace StepByStep
         {
             string[] parts = filePath.Split('\\');
             string shortcut = parts[parts.Length - 1];
-            
-            File.Create(@filePath); 
+            //File.Create(@filePath); 
             MyFiles.Add(new MyFile(filePath, shortcut));
             Console.WriteLine("File added! "+ shortcut);
-            /*
-             
-             "C:\Users\HP\RiderProjects\software_design_lab1_1\Files\file1.txt"
-             "C:\Users\HP\RiderProjects\software_design_lab1_1\Files\file2.txt"
-             "C:\Users\HP\RiderProjects\software_design_lab1_1\Files\file3.txt"
-             
-             */
+          
         }
 
         public void RemoveFile(string shortcut)
@@ -29,7 +22,7 @@ namespace StepByStep
             MyFile fileToRemove = MyFiles.Find(file => file.Name == shortcut);
             if (fileToRemove != null)
             {
-                File.Delete(fileToRemove.Path);
+                //File.Delete(fileToRemove.Path);
                 MyFiles.Remove(fileToRemove);
             }
         }
@@ -38,8 +31,29 @@ namespace StepByStep
         {
             foreach (var myFile in MyFiles)
             {
-                Console.WriteLine(myFile.Name);
+                Console.WriteLine("file name: " + myFile.Name);
             }
+        }
+
+        public void Options(string shortcut)
+        {
+            if (shortcut.Length >= 3 && shortcut.Substring(shortcut.Length - 3).Equals("txt", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("summarizing");
+            }
+            if (shortcut.Length >= 3 && shortcut.Substring(shortcut.Length - 3).Equals("csv", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("printing & validating");
+            }
+            if (shortcut.Length >= 4 && shortcut.Substring(shortcut.Length - 4).Equals("json", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("printing & validating");
+            }
+
+        }   
+        public void Login(string shortcut)
+        {
+            
         }
         
     }

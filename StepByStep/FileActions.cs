@@ -4,6 +4,12 @@ using System.IO;
 
 namespace StepByStep
 {
+    public interface IFileAction
+    {
+        void Act();
+    }
+    
+    
     public class FileActions
     {
         List<MyFile> MyFiles = new List<MyFile>();

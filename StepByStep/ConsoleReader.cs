@@ -22,6 +22,18 @@ namespace StepByStep
             {
                 fileAction.ListFiles();
             }
+            if (divide_input[0].ToLower() == "options")
+            {
+                fileAction.Options(divide_input[1]);
+            }
+             if (divide_input[0].ToLower() == "login")
+            {
+                fileAction.Login(divide_input[1]);
+            }
+             if (divide_input[0].ToLower() == "change")
+            {
+                fileAction.Login(divide_input[1]);
+            }
             
         }
     }
