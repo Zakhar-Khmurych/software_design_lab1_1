@@ -2,11 +2,11 @@
 
 namespace BusinessLogic
 {
-    public interface IFileManager
+    public interface IFileManager<T>
     {
-        void Add(string path, string shortcut, string name = null);        
+        void Add(string path, string shortcut, T content, string name = null);        
         void Remove(string shortcut);
-        List<File> ListFiles(string path);
+        List<T> ListFiles(string path);
         void Summarize(string path);
     }
 }
