@@ -51,7 +51,7 @@ namespace StepByStep
             }
 
         }   
-        public void Login(string shortcut)
+        public void Login(string shortcut)// dictionary of users & filesystems
         {
             
         }
